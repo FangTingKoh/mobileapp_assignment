@@ -34,11 +34,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="130dp"
-            android:fontFamily="serif-monospace"
             android:text="Tap to Begin!"
-            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
             android:textColor="@color/yellow"
-            android:textSize="30sp"></TextView>
+            android:textSize="30sp"
+            android:textStyle="bold"></TextView>
 
         <ImageView
             android:id="@+id/player"
