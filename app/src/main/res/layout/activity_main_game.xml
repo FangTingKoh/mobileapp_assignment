@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity_game">
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="Score: 300"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/grass"
+            android:scaleType="fitXY" />
+
+
+        <TextView
+            android:id="@+id/startLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:fontFamily="serif-monospace"
+            android:text="Tap to Begin!"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            android:textSize="30sp"></TextView>
+
+        <ImageView
+            android:id="@+id/player"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/player" />
+
+
+        <ImageView
+            android:id="@+id/pink_gem"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/pink_gem" />
+
+        <ImageView
+            android:id="@+id/pink_gem1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/pink_gem" />
+
+        <ImageView
+            android:id="@+id/treasurebox"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/treasurebox" />
+
+        <ImageView
+            android:id="@+id/blue_gem"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/blue_gem" />
+
+        <ImageView
+            android:id="@+id/red_gem"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/red_gem" />
+
+    </FrameLayout>
+
+
+</LinearLayout>
