@@ -39,6 +39,6 @@ public class recordresult extends AppCompatActivity {
     }
     public void tryAgain(View view)
     {
-        startActivity(new Intent(getApplicationContext(), MainActivity_game.class));
+        startActivity(new Intent(getApplicationContext(), menu.class));
     }
 }
