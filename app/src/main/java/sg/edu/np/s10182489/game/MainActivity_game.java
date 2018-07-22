@@ -59,8 +59,8 @@ public class MainActivity_game extends AppCompatActivity {
     private sound_effect sound;
 
     //Status check
-    private boolean action_flg = false;
-    private boolean start_flg = false;
+    private boolean action_stat = false;
+    private boolean start_stat = false;
 
 
     @Override
@@ -112,9 +112,9 @@ public class MainActivity_game extends AppCompatActivity {
 
     }
 
-    public void changePos(){
+    public void changePosition(){
 
-        hitCheck();
+        collideCheck();
 
         //pink_gem
         pink_gemX -=12;
@@ -162,7 +162,7 @@ public class MainActivity_game extends AppCompatActivity {
         red_gem.setY(red_gemY);
 
         //Move Box
-        if(action_flg==true){
+        if(action_stat==true){
             //touching
             playerY -= 20;
         }else{
@@ -180,7 +180,7 @@ public class MainActivity_game extends AppCompatActivity {
         scoreLabel.setText("Score:" + score);
     }
 
-    public void hitCheck(){
+    public void collideCheck(){
         //If the center of the gems hit the player, it counts as 1 hit
 
         //pink gem
@@ -275,9 +275,9 @@ public class MainActivity_game extends AppCompatActivity {
 
     public boolean onTouchEvent(MotionEvent me){
 
-        if(start_flg == false){
+        if(start_stat == false){
 
-            start_flg = true;
+            start_stat = true;
 
             //Why get frame and player height there?
             //bECAUSE THE UI HAS NOT BEEN SET ON SCREEN IN oNcREATE
@@ -296,7 +296,7 @@ public class MainActivity_game extends AppCompatActivity {
                 public void run(){
                     handler.post(new Runnable(){
                         public void run(){
-                            changePos();
+                            changePosition();
                         }
                     });
                 }
@@ -307,10 +307,10 @@ public class MainActivity_game extends AppCompatActivity {
         }else{
 
             if(me.getAction() == MotionEvent.ACTION_DOWN) {
-                action_flg = true;
+                action_stat = true;
 
             }else if (me.getAction()==MotionEvent.ACTION_UP){
-                action_flg = false;
+                action_stat = false;
         }
 
         }
