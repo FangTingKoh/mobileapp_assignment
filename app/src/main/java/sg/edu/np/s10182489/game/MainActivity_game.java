@@ -56,6 +56,7 @@ public class MainActivity_game extends AppCompatActivity {
     //Initialize class
     private Handler handler = new Handler();
     private Timer timer = new Timer();
+    private sound_effect sound;
 
     //Status check
     private boolean action_flg = false;
@@ -66,6 +67,8 @@ public class MainActivity_game extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game);
+
+        sound = new sound_effect(this);
 
         scoreLabel = (TextView) findViewById(R.id.scoreLabel);
         startLabel = (TextView) findViewById(R.id.startLabel);
@@ -189,6 +192,8 @@ public class MainActivity_game extends AppCompatActivity {
             score +=10;
 
             pink_gemX -= 10;
+
+            sound.playhitsound();
         }
 
 
@@ -203,6 +208,8 @@ public class MainActivity_game extends AppCompatActivity {
             score +=10;
 
             pink_gem1X -= 10;
+
+            sound.playhitsound();
         }
 
         //treasurebox
@@ -214,6 +221,8 @@ public class MainActivity_game extends AppCompatActivity {
             score +=10;
 
             treasure_boxX -= 10;
+
+            sound.playhitsound();
         }
 
 
@@ -233,6 +242,8 @@ public class MainActivity_game extends AppCompatActivity {
 
             timer.cancel();
             timer = null;
+
+            sound.playoversound();
             //show Result
             Intent intent = new Intent(getApplicationContext(), recordresult.class);
             intent.putExtra("SCORE", score);
@@ -250,6 +261,8 @@ public class MainActivity_game extends AppCompatActivity {
 
             timer.cancel();
             timer = null;
+            sound.playoversound();
+
             //show Result
             Intent intent = new Intent(getApplicationContext(), recordresult.class);
             intent.putExtra("SCORE", score);
