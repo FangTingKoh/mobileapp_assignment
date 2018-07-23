@@ -77,7 +77,7 @@ public class MainActivity_game extends AppCompatActivity {
         setContentView(R.layout.activity_main_game);
 
         sound = new sound_effect(this);
-        //hello
+        //hello this
         scoreLabel = (TextView) findViewById(R.id.scoreLabel);
         startLabel = (TextView) findViewById(R.id.startLabel);
         player = (ImageView) findViewById(R.id.player);
