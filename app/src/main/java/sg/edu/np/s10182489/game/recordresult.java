@@ -41,4 +41,9 @@ public class recordresult extends AppCompatActivity {
     {
         startActivity(new Intent(getApplicationContext(), menu.class));
     }
+
+    public void viewScore(View view)
+    {
+        startActivity(new Intent(getApplicationContext(), game_recyclerview.class));
+    }
 }

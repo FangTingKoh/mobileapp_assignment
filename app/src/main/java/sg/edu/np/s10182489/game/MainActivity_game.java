@@ -9,6 +9,7 @@ import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +33,13 @@ public class MainActivity_game extends AppCompatActivity {
     private int playerSize;
     private int screenWidth;
     private int screenHeight;
+
+    /*Animation
+    private Animation idle;
+    private Animation walkRight;
+    private Animation walkLeft;
+    */
+    //private AnimationManager animManager;
 
     //Position
     private int playerY;

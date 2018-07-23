@@ -3,55 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".recordresult"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/grass"
-    >
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".recordresult">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="GAME OVER"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
         android:textColor="@color/yellow"
-        />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageView
-        android:layout_width="117dp"
-        android:layout_height="91dp"
+        android:layout_width="180dp"
+        android:layout_height="144dp"
         android:src="@drawable/fox" />
 
     <TextView
         android:id="@+id/scoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="150"
-        android:textSize = "40sp"
-        android:layout_marginTop="80dp"
-        android:textStyle="bold"
-        android:textColor="@color/yellow"/>
+        android:textColor="@color/yellow"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/highScoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="High Score : 300"
+        android:textColor="@color/yellow"
         android:textSize="20sp"
-        android:layout_marginTop="80dp"
-        android:textStyle="bold"
-        android:textColor="@color/yellow"/>
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop = "50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="tryAgain"
         android:text="Try Again"
-        android:textAllCaps="false"
-        android:onClick="tryAgain">
+        android:textAllCaps="false">
 
     </Button>
 
 
+    <Button
+        android:id="@+id/viewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="viewScore"
+        android:text="View Score"
+        android:textAllCaps="false">
+
+    </Button>
 
 </LinearLayout>
