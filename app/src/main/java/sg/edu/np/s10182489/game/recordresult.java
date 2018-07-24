@@ -66,7 +66,7 @@ public class recordresult extends AppCompatActivity {
         });
     }
 
-    //method to add score into the database
+    //method to add score  into the database
     private void addScore()
     {
         //Value of the score
