@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity_game"></activity>
+        <activity android:name=".MainActivity_game" />
         <activity android:name=".recordresult" />
-
+        <activity android:name=".delete_dialog" />
     </application>
 
 </manifest>
