@@ -26,7 +26,7 @@
         android:id="@+id/highScoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="High Score : 300"
+        android:text="High sg.edu.np.s10182489.game.Score : 300"
         android:textSize="20sp"
         android:layout_marginTop="80dp"/>
 

@@ -58,7 +58,7 @@ public class MainActivity_game extends AppCompatActivity {
     private int treasure_boxX;
     private int treasure_boxY;
 
-    //Score
+    //sg.edu.np.s10182489.game.Score
     private int score = 0;
 
     //Initialize class
@@ -114,7 +114,7 @@ public class MainActivity_game extends AppCompatActivity {
         treasure_box.setY(-80);
 
 
-        scoreLabel.setText("Score: 0");
+        scoreLabel.setText("sg.edu.np.s10182489.game.Score: 0");
 
 
 
@@ -185,7 +185,7 @@ public class MainActivity_game extends AppCompatActivity {
 
         player.setY(playerY);
 
-        scoreLabel.setText("Score:" + score);
+        scoreLabel.setText("sg.edu.np.s10182489.game.Score:" + score);
     }
 
     public void collideCheck(){
