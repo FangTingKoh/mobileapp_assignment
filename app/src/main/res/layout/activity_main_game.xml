@@ -13,8 +13,28 @@
         android:layout_height="50dp"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
+        android:background="@drawable/grass_half"
+        android:textColor="@color/yellow"
         android:text="Score: 300"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        />
+
+    <Button
+
+        android:id="@+id/pausebutton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/grass_half"
+        android:textColor="@color/pink"
+        android:onClick="pausepressed"
+        android:text="PAUSE"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <FrameLayout
         android:id="@+id/frame"

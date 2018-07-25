@@ -90,6 +90,7 @@ public class recordresult extends AppCompatActivity {
     {
         startActivity(new Intent(getApplicationContext(), menu.class));
     }
+    // the code below leads to the recycler view
     /*
     public void viewScore(View view)
     {

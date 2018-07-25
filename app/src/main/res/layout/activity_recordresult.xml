@@ -44,6 +44,7 @@
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/tryagainbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -53,16 +54,5 @@
 
     </Button>
 
-
-    <Button
-        android:id="@+id/viewScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="viewScore"
-        android:text="View Score"
-        android:textAllCaps="false">
-
-    </Button>
 
 </LinearLayout>
