@@ -114,7 +114,7 @@ public class MainActivity_game extends AppCompatActivity {
         treasure_box.setY(-80);
 
 
-        scoreLabel.setText("sg.edu.np.s10182489.game.Score: 0");
+        scoreLabel.setText("Score: 0");
 
 
 
@@ -185,7 +185,7 @@ public class MainActivity_game extends AppCompatActivity {
 
         player.setY(playerY);
 
-        scoreLabel.setText("sg.edu.np.s10182489.game.Score:" + score);
+        scoreLabel.setText("Score:" + score);
     }
 
     public void collideCheck(){
@@ -249,7 +249,7 @@ public class MainActivity_game extends AppCompatActivity {
 */
 
             timer.cancel();
-            timer = null;
+            //timer = null;
 
             sound.playoversound();
             //show Result
@@ -268,11 +268,11 @@ public class MainActivity_game extends AppCompatActivity {
             //stop timer
 
             timer.cancel();
-            timer = null;
+            //timer = null;
             sound.playoversound();
 
             //show Result
-            Intent intent = new Intent(getApplicationContext(), recordresult.class);
+            Intent intent = new Intent(this, recordresult.class);
             intent.putExtra("SCORE", score);
             startActivity(intent);
         }

@@ -42,7 +42,7 @@ public class recordresult extends AppCompatActivity {
 
         if(score > highScore)
         {
-            highScoreLabel.setText("High sg.edu.np.s10182489.game.Score : " + score);
+            highScoreLabel.setText("High Score : " + score);
 
 //save
             SharedPreferences.Editor editor = settings.edit();
@@ -52,11 +52,11 @@ public class recordresult extends AppCompatActivity {
         else
             {
 
-            highScoreLabel.setText("High sg.edu.np.s10182489.game.Score: " + highScore);
+            highScoreLabel.setText("High Score: " + highScore);
 
             }
 
-        viewScore.setOnTouchListener(new View.OnTouchListener()
+       /* viewScore.setOnTouchListener(new View.OnTouchListener()
         {
             @Override
             public boolean onTouch(View v, MotionEvent event)
@@ -64,21 +64,25 @@ public class recordresult extends AppCompatActivity {
                 return false;
             }
         });
+*/
     }
 
     //method to add score  into the database
-    private void addScore()
+   private void addScore()
     {
         //Value of the score
         String Score = scoreLabel.getText().toString();
         if(!TextUtils.isEmpty(Score))
         {
             //to generate the unique key and get the key form the database.
-            String scoreID = databaseScore.push().getKey();
+           String scoreID = databaseScore.push().getKey();
+           //note the code ontop may not be necessary.
 
             Score score = new Score(Score);
 
             databaseScore.child(scoreID).setValue(Score);
+            //the code below would be implemented when the code above is not implemented.
+            //databaseScore.setValue(Score);
         }
 
     }
