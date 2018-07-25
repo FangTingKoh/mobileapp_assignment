@@ -86,11 +86,14 @@ public class recordresult extends AppCompatActivity {
         }
 
     }
-    public void tryAgain(View view)
+    public void goMenu(View view)
     {
         startActivity(new Intent(getApplicationContext(), menu.class));
     }
-    // the code below leads to the recycler view
+
+    public void tryAgain(View view) {
+        startActivity(new Intent(getApplicationContext(), MainActivity_game.class));
+    }
     /*
     public void viewScore(View view)
     {
