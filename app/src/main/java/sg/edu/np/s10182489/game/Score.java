@@ -2,7 +2,7 @@ package sg.edu.np.s10182489.game;
 //score for game
 public class Score
 {
-    String score = "";
+    String scores = "";
 
     public Score()
     {
@@ -11,12 +11,12 @@ public class Score
 
     public Score(String score)
     {
-        this.score = score;
+        this.scores = scores;
     }
 
     public String getScore()
     {
-        return score;
+        return scores;
     }
 }
 
