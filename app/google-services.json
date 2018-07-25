@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "949206805474",
+    "firebase_url": "https://mobile-assignment-4ab33.firebaseio.com",
+    "project_id": "mobile-assignment-4ab33",
+    "storage_bucket": "mobile-assignment-4ab33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949206805474:android:7f2463d3065d97f8",
+        "android_client_info": {
+          "package_name": "sg.edu.np.s10182489.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949206805474-etocb5kbqpg3ilg58d8dm4apo5ksqf5v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sg.edu.np.s10182489.game",
+            "certificate_hash": "f333c21aff88a11b76fe789efcec9a3ef29ffe59"
+          }
+        },
+        {
+          "client_id": "949206805474-4tk780he9h37upm583sq0lk2so53m4hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKt6YwfIahdwVX8i71F5yyKiaf4Cddkbs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949206805474-4tk780he9h37upm583sq0lk2so53m4hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

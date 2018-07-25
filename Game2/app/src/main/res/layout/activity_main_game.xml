@@ -13,7 +13,7 @@
         android:layout_height="50dp"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
-        android:text="Score: 300"
+        android:text="sg.edu.np.s10182489.game.Score: 300"
         android:textSize="18sp" />
 
     <FrameLayout
