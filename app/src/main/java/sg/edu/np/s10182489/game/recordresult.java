@@ -94,10 +94,10 @@ public class recordresult extends AppCompatActivity {
     public void tryAgain(View view) {
         startActivity(new Intent(getApplicationContext(), MainActivity_game.class));
     }
-    /*
-    public void viewScore(View view)
+
+   /* public void viewScore(View view)
     {
-        startActivity(new Intent(getApplicationContext(), game_recyclerview.class));
+        startActivity(new Intent(getApplicationContext(), .class));
     }
     */
 

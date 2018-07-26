@@ -65,6 +65,12 @@
 
     </Button>
 
->>>>>>> Stashed changes
+    <Button
+        android:id="@+id/records"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Score" />
+
+    >>>>>>> Stashed changes
 
 </LinearLayout>
