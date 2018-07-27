@@ -20,6 +20,7 @@ import java.util.TimerTask;
 
 public class MainActivity_game extends AppCompatActivity {
 
+    //Create varibles
     private TextView scoreLabel;
     private TextView startLabel;
     private ImageView player;
@@ -81,6 +82,7 @@ public class MainActivity_game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game);
 
+        //Assign the value in to the variables by finding the id
         btnpause = (Button)findViewById(R.id.pausebutton);
 
         sound = new sound_effect(this);

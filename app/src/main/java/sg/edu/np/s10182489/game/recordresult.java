@@ -11,15 +11,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.List;
 
 public class recordresult extends AppCompatActivity {
 
     TextView scoreLabel;
     TextView highScoreLabel;
     Button viewScore;
-
+    RecyclerViewScore = (RecyclerView) findViewByID(R.id.recordsList);
+    scoreList = new ArrayList<>();
     DatabaseReference databaseScore;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -66,6 +71,31 @@ public class recordresult extends AppCompatActivity {
         });
 */
     }
+    public void onClick(View view)
+    {
+        addScore();
+    }
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        DatabaseScore.addValueEventListener(new ValueEventListener())
+        {
+            public void onDataChange(DataSnapshot datasnapshot)
+            {
+                scoreList.clear();
+            }
+                for(DataSnapshot scoreSnapshot: dataSnapshot.getChildren())
+                {
+                    Score score = scoreSnapshot.getValue(Score.class);
+                    scoreList.add(score);
+                }
+
+                ScoreList adapter = new ScoreList(this,scoreList);
+                RecyclerViewScore.setAdapter(adapter);
+            }
+            }
 
     //method to add score  into the database
    private void addScore()
@@ -86,6 +116,7 @@ public class recordresult extends AppCompatActivity {
         }
 
     }
+
     public void goMenu(View view)
     {
         startActivity(new Intent(getApplicationContext(), menu.class));
@@ -95,10 +126,10 @@ public class recordresult extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), MainActivity_game.class));
     }
 
-   /* public void viewScore(View view)
+   public void viewScore(View view)
     {
-        startActivity(new Intent(getApplicationContext(), .class));
+        startActivity(new Intent(getApplicationContext(), listview.class));
     }
-    */
+
 
 }
