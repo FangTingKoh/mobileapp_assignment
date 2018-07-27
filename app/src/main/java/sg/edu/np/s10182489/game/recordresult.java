@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
@@ -12,10 +13,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class recordresult extends AppCompatActivity {
@@ -23,17 +26,17 @@ public class recordresult extends AppCompatActivity {
     TextView scoreLabel;
     TextView highScoreLabel;
     Button viewScore;
-    RecyclerViewScore = (RecyclerView) findViewByID(R.id.recordsList);
-    scoreList = new ArrayList<>();
+    RecyclerView rv;// = (RecyclerView) findViewByID(R.id.recordsList);
+    ArrayList<Score> scoreList = new ArrayList<>();
     DatabaseReference databaseScore;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recordresult);
-
-        TextView scoreLabel = (TextView)findViewById(R.id.scoreLabel);
-        TextView highScoreLabel = (TextView)findViewById(R.id.highScoreLabel);
+        //rv = (RecyclerView) findViewById(R.id.rvScore);
+         scoreLabel = (TextView)findViewById(R.id.scoreLabel2);
+         highScoreLabel = (TextView)findViewById(R.id.highScoreLabel);
 
         databaseScore = FirebaseDatabase.getInstance().getReference("scores");
 
@@ -73,29 +76,35 @@ public class recordresult extends AppCompatActivity {
     }
     public void onClick(View view)
     {
+
         addScore();
     }
 
     @Override
-    protected void onStart()
-    {
+    protected void onStart() {
         super.onStart();
-        DatabaseScore.addValueEventListener(new ValueEventListener())
-        {
-            public void onDataChange(DataSnapshot datasnapshot)
-            {
+        databaseScore.addValueEventListener(new ValueEventListener() {
+            public void onDataChange(DataSnapshot datasnapshot) {
                 scoreList.clear();
-            }
-                for(DataSnapshot scoreSnapshot: dataSnapshot.getChildren())
-                {
+
+                for (DataSnapshot scoreSnapshot : datasnapshot.getChildren()) {
                     Score score = scoreSnapshot.getValue(Score.class);
                     scoreList.add(score);
                 }
 
-                ScoreList adapter = new ScoreList(this,scoreList);
-                RecyclerViewScore.setAdapter(adapter);
+                //adapater.notifyDataSetChanged();
+                //ScoreAdapter adapter = new ScoreAdapter(this, scoreList);
+                //RecyclerViewScore.setAdapter(adapter);
+
             }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
             }
+        });
+    }
+
 
     //method to add score  into the database
    private void addScore()
@@ -119,6 +128,7 @@ public class recordresult extends AppCompatActivity {
 
     public void goMenu(View view)
     {
+
         startActivity(new Intent(getApplicationContext(), menu.class));
     }
 
@@ -128,6 +138,7 @@ public class recordresult extends AppCompatActivity {
 
    public void viewScore(View view)
     {
+        addScore();
         startActivity(new Intent(getApplicationContext(), listview.class));
     }
 

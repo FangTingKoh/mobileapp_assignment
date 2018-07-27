@@ -20,7 +20,7 @@ import java.util.TimerTask;
 
 public class MainActivity_game extends AppCompatActivity {
 
-    //Create varibles
+    //Create variables
     private TextView scoreLabel;
     private TextView startLabel;
     private ImageView player;
@@ -265,7 +265,7 @@ public class MainActivity_game extends AppCompatActivity {
 
         }
 
-        //red gem
+
 
         //red_gem
         int red_gemCenterX = red_gemX + red_gem.getWidth() / 2;

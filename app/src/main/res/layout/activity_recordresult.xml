@@ -24,7 +24,7 @@
         android:src="@drawable/fox" />
 
     <TextView
-        android:id="@+id/scoreLabel"
+        android:id="@+id/scoreLabel2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".MainActivity_game" />
         <activity android:name=".recordresult" />
-        <activity android:name=".delete_dialog" />
+        <activity android:name=".listview" />
         <activity android:name=".instruction"></activity>
     </application>
 
